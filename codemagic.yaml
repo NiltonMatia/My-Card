@@ -1,0 +1,14 @@
+workflows:
+  default-workflow:
+    name: Default Workflow
+    instance_type: mac_mini
+    environment:
+      flutter: stable
+      cocoapods: default
+    scripts:
+      - name: Install dependencies
+        script: |
+          flutter packages get
+      - name: Run tests
+        script: |
+          flutter test
